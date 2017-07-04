@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Healthy food</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        section#commonSense {
+            margin-top: 5px;
+            margin-bottom: 35px;
+        }
+
+        section#commonSense ul {
+            padding-left: 10px;
+        }
+
+        section#commonSense li:before {
+            content: counter(listxh);
+            background: #3598db;
+            padding: 2px 6px;
+            color: #fff;
+            margin-right: 5px;
+        }
+
+        section#commonSense li {
+            counter-increment: listxh;
+            display: inline-block;
+            width: 80%;
+            vertical-align: bottom;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-top: 15px;
+            -webkit-transition: text-shadow 1s linear;
+        }
+
+        section#commonSense li:hover {
+            text-shadow: 2px 7px 9px #000;
+        }
+
+        section#commonSense a {
+            color: #444444;
+            text-decoration: none;
+        }
+
+        .box-main {
+            width: 250px;
+            height: 250px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .box-tabUp {
+            position: relative;
+            top: -40px;
+            width: 250px;
+            padding-left: 10px;
+            line-height: 20px;
+            color: #fff;
+            transition: .5s;
+            -webkit-transition: .5s;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(1, rgba(0, 0, 0, 0.9)));
+        }
+
+        .box-tabUp h4 {
+            margin-bottom: 10px;
+        }
+
+        .box-text {
+            padding-bottom: 10px;
+        }
+
+        .box-text span {
+            font-size: 12px;
+            color: #e8e8e8;
+        }
+
+        .Four_seasons p {
+            padding: 10px 0 10px 0;
+            font-size: 17px;
+            line-height: 36px;
+        }
+
+        footer p {
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <!--<li><a class="title" href="#">Healthy Home</a></li>-->
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">养生常识</a></li>
+                <li><a href="#">养生菜谱</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">四季养生<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"> 春季养生</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"> 夏季养生</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"> 秋季养生</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"> 冬季养生</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="请输入关键词" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">搜索</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <h1>养生</h1>
+        <p>
+            养生，动词也，亦可为名词。原指道家通过各种方法颐养生命、增强体质、预防疾病，从而达到延年益寿的一种医事活动。养，即调养、保养、补养之意；生，即生命、生存、生长之意。现代意义的“养生”指的是根据人的生命过程规律主动进行物质与精神的身心养护活动。</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">开启养生之旅 &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>常识</h2>
+            <section id="commonSense">
+                <ul>
+                    <li><a href="">换季感冒 不得不知的正确护理知识</a></li>
+                    <li><a href="">会阴穴在哪个位置 针灸会阴穴要注意什么</a></li>
+                    <li><a href="">扁挑体炎怎么调理好得快</a></li>
+                    <li><a href="">生命的“高危期” 最容易出现的8种疾病</a></li>
+                    <li><a href="">晚饭后散步到底有哪些讲究</a></li>
+                    <li><a href="">调节血糖 日常饮食多注意这3种食材</a></li>
+                    <li><a href="">初夏 让红色食物陪你养心</a></li>
+                </ul>
+            </section>
+            <p><a class="btn btn-default" href="#" role="button">查看更多&raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>菜谱</h2>
+            <div class="box-main">
+                <img src="../static/image/food1.png">
+                <div class="box-tabUp" id="box-tabUp">
+                    <h4>益母玫瑰茶</h4>
+                    <div class="box-text">
+                        <span>平衡内分泌、补气补血<br/>这款茶饮具有活血去淤、止痛调经的功效。</span>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-default" href="#" role="button">查看更多&raquo;</a></p>
+        </div>
+        <div class="col-md-4 ">
+            <div class="Four_seasons">
+                <h2>四季养生</h2>
+                <p>一年四季的气候轮换，自然状况改变之下，人们的生理状况也会受影响。在不同的时节，我们需要摄取不同的养分来补充身体的需求，一年四季，你的餐单也要跟着换不停。　
+                    另外有关疾病的发生、发展及变化都有季节性;春天好发温病;夏天易中暑;秋天有燥症;冬天有冻伤。由此，我们需要作出不同的饮食调整。</p>
+            </div>
+            <p><a class="btn btn-default" href="#" role="button">查看更多&raquo;</a></p>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p>&copy; 2017 @liuxinyu 养生堂 health</p>
+    </footer>
+</div>
+<script>
+    var oboxUp = document.getElementById("box-tabUp");
+    oboxUp.onmouseover = function () {
+        oboxUp.style.top = -90 + "px";
+    };
+    oboxUp.onmouseout = function () {
+        oboxUp.style.top = -40 + "px";
+    };
+    //    $(function () {
+    //        $.getJSON('/select_common_sense', function (result) {
+    //            var common="";
+    //            var list = result.name;
+    //            for(var i=0;i<7;i++){
+    //                common+="<li><a href=''>"+list[i].title+"</a></li>";
+    //            }
+    //            console.log(common);
+    //            $("#commonSense ul").innerHTML=common;
+    //        })
+    //    })
+</script>
+</body>
+</html>
